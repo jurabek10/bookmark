@@ -3,6 +3,7 @@
     --text-color: #242A45;
     --red-bg: #FA5959;
     --blue-bg: #5267DF;
+    --gray-bg: #F7F7F7;
 }
 
 /* GLOBAL STYLES */
@@ -40,7 +41,7 @@ img {
 .button {
     display: inline-block;
     border-radius: 5px;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     background-color: var(--blue-bg);
     color: #fff;
     font-weight: 500;
@@ -63,11 +64,46 @@ img {
 
 .button-red-small:hover {
     background-color: #fff;
-    border: 1px solid var(--red-bg);
+    border: 2px solid var(--red-bg);
     color: var(--red-bg);
 }
 
 .button-red-small:active {
+    opacity: 0.6;
+}
+
+.button-blue-medium {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 28px; /* 200% */
+    letter-spacing: 0.25px;
+}
+
+.button-blue-medium:hover {
+    background-color: #fff;
+    border: 2px solid var(--blue-bg);
+    color: var(--blue-bg);
+}
+
+.button-blue-medium:active {
+    opacity: 0.6;
+}
+
+.button-gray {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 28px; /* 200% */
+    letter-spacing: 0.25px;
+    color: rgba(36, 42, 69, 0.75);
+    background-color: var(--gray-bg);
+}
+
+.button-gray:hover {
+    border: 2px solid #5B6074;
+    background-color: #fff;
+}
+
+.button-gray:active {
     opacity: 0.6;
 }
 
@@ -145,4 +181,61 @@ main {
 
 .sitenav__link:active {
     opacity: 0.6;
+}
+
+
+/* HERO */
+.hero {
+    padding-top: 0;
+    padding-bottom: 80px;
+    background-image: url("../img/Rectangle.svg");
+    background-repeat: no-repeat;
+    background-position: right calc(50% - 600px) top 105px;  
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+}
+
+.hero__inner {
+    flex-shrink: 0; 
+    width: 540px;
+    margin-right: 64px;
+}
+
+.hero__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--text-color);
+    font-size: 48px;
+    font-style: normal;
+    line-height: 52px; /* 108.333% */
+    letter-spacing: -0.15px;
+}
+
+.hero__text {
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: rgba(36, 42, 69, 0.5);;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; 
+}
+
+.hero__button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.hero__button:not(:last-child) {
+    margin-right: 16px;
+}
+
+.hero__img {
+    flex-shrink: 1;
+    width: 575px;
+    height: 380px;
+    object-fit: cover;
 }
